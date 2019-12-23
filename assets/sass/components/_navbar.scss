@@ -1,0 +1,220 @@
+//===========================================
+// -Navbar start
+//===========================================
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    padding: 3px;
+
+    @media screen and (max-width: 700px) {
+        z-index: -1000;
+        opacity: 0;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        height: 100%;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-direction: column;
+
+        li {
+            transform: rotate(-90deg);
+
+
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 0;
+                left: 0;
+                background-color: white;
+                width: 35%;
+                height: 3px;
+            }
+
+            a {
+                color: white;
+                text-decoration: none;
+                font-size: rem(17);
+            }
+        }
+    }
+}
+
+.humburger {
+    background-color: black;
+    box-shadow: -1px 6px 16px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    position: absolute !important;
+    top: 6% !important;
+    left: 11% !important;
+    z-index: -1000;
+    opacity: 0;
+    cursor: pointer;
+
+    @media screen and (max-width: 700px) {
+        z-index: 1000;
+        opacity: 1;
+    }
+
+    span {
+        margin: 5px 0;
+        display: block;
+        height: 4px;
+        background-color: white;
+        transition: 500ms;
+    }
+
+    span:nth-child(1) {
+        width: 33px;
+    }
+
+    span:nth-child(2) {
+        width: 25px;
+    }
+
+    span:nth-child(3) {
+        width: 20px;
+    }
+}
+
+.humburger2 {
+    @media screen and (max-width: 700px) {
+        z-index: 1002;
+    }
+
+    span:nth-child(1) {
+        transform: rotate(45deg);
+        position: relative;
+        top: 9px;
+        width: 33px;
+    }
+
+    span:nth-child(2) {
+        opacity: 0;
+        width: 33px;
+    }
+
+    span:nth-child(3) {
+        transform: rotate(-45deg);
+        position: relative;
+        top: -9px;
+        width: 33px;
+    }
+}
+
+.navigation-wrapper {
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    height: 100%;
+    z-index: 1001;
+    width: 60%;
+    background-color: black;
+    clip-path: circle(0);
+    transition: 1s;
+
+    &.side-active {
+        clip-path: circle(100%) !important;
+    }
+
+    ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 140px 0 0 70px;
+        font-size: 25px;
+
+
+        li {
+            position: relative !important;
+            padding-left: 35px;
+            cursor: pointer;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 15px;
+                left: 0;
+                height: 3px;
+                width: 20px;
+                background-color: #212529;
+            }
+
+            a {
+                text-decoration: none;
+                color: #212529;
+            }
+        }
+    }
+}
+
+.social-wrapper {
+
+    position: absolute;
+    top: 15%;
+    right: 0%;
+    z-index: 999999;
+
+    ul {
+        list-style-type: none;
+        padding: 10px;
+        margin: 0;
+        transition: 500ms;
+        transform: scale(0.0);
+
+        li {
+            position: relative !important;
+            cursor: pointer;
+            background-color: #ffffff;
+            margin: 10px 2px;
+            padding: 5px;
+            border-radius: 100%;
+
+            &::before {
+                content: "";
+                position: absolute;
+                top: 30px;
+                right: 0px;
+                height: 3px;
+                width: 20px;
+                background-color: #212529;
+            }
+
+            a {
+                text-decoration: none;
+
+                img {
+                    height: 25px;
+                }
+            }
+        }
+    }
+}
+
+.social-btn {
+    cursor: pointer;
+    position: absolute !important;
+    top: 6% !important;
+    left: auto !important;
+    right: 11% !important;
+    width: 60px;
+    height: 60px;
+    background-image: url("../images/share.png");
+    background-size: 60%;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: -1px 6px 16px rgba(0, 0, 0, 0.7);
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 999999;
+}
+
+//===========================================
+// -Navbar end
+//===========================================
