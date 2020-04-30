@@ -30,6 +30,6 @@
   "homepage": "https://github.com/ismailfarooq/gulp-sass-starter-template#readme",
   "dependencies": {
     "bootstrap": "^4.3.1",
-    "jquery": "^3.4.1"
+    "jquery": "^3.5.0"
   }
 }
